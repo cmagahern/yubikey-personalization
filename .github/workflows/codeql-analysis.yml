@@ -43,8 +43,11 @@ jobs:
     #    and modify them (or add more) to build your code if your project
     #    uses a compiled language
 
-    - run: |
-       ./build-and-test.sh
+
+    - run: ./build-and-test.sh
+      env:
+        LIBUSB: "libusb-1.0" 
+        EXTRA: "libusb-1.0-0-dev libjson0-dev lcov"
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v1
