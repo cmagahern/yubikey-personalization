@@ -45,7 +45,7 @@ jobs:
 
 
     - run: |
-        sudo apt install -y libjson-c-dev
+        sudo apt install -y libjson-c-dev libyubikey-dev json-c libyubikey0
         ./build-and-test.sh
       env:
         LIBUSB: "libusb-1.0" 
