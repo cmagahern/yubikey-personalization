@@ -44,7 +44,9 @@ jobs:
     #    uses a compiled language
 
 
-    - run: ./build-and-test.sh
+    - run: |
+        sudo apt install -y libjson-c-dev
+        ./build-and-test.sh
       env:
         LIBUSB: "libusb-1.0" 
         EXTRA: "libusb-1.0-0-dev libjson0-dev lcov"
